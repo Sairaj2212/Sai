@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .title {
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        #project-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem; /* Adjusted gap */
+            padding: 1rem;
+            margin-top: 1rem;
+            width: 100%;
+            scrollbar-width: 0;
+            scroll-behavior: smooth;
+            justify-content: center; /* Center projects */
+        }
+
+        .project-containers {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid #ccc;
+            padding: 0.5rem; /* Adjusted padding */
+            border-radius: 10px;
+            background-color: white;
+            transition: border-color 330ms ease-in-out, transform 330ms ease-in-out;
+        }
+
+        .project-containers:hover {
+            border-color: red;
+            transform: scale(1.1);
+        }
+
+        .project-details-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .project-image {
+            width: 100px; /* Adjusted width */
+            height: 100px; /* Adjusted height */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.5rem; /* Adjusted margin */
+            margin-left:1.5rem;
+            }
+
+
+        .project-content {
+            max-width: 150px; /* Adjusted max-width */
+        }
+    </style>
+</head>
+<body>
+<h1 class="title">Projects</h1>
+<div id="project-container">
+    <div class="project-containers">
+        <div class="project-details-container">
+            <img src="./assets/vardhan.jpg" alt="Project Image" class="project-image">
+            <p class="project-content">
+                <h4>Webpage Portfolio</h4>
+                <p>
+                    <a href="https://sairaj2212.github.io/Sai/" target="_blank">Click Here</a>
+                </p>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
