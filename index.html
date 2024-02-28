@@ -255,11 +255,35 @@
 <div class="iframe-container" id="test">
   <iframe src="testimonials.html" frameborder="0"></iframe>
 </div>
-
-
-    <section id="contacts">
+  <section id="contacts">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+      <div class="contact-form">
+        <form>
+          <label for="fname">Name       </label>&nbsp;&nbsp;
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="email">Email      </label>&nbsp;&nbsp;
+          <input type="email" id="email" name="email"><br><br>
+          <label for="number">Mobile    </label>&nbsp;&nbsp;
+          <input type="tel" id="phone" name="phone"><br><br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="8" cols="40" maxlength="2000"></textarea>
+          <p id="charCountMessage">0 characters entered (max 2000)</p>
+          
+          <script>
+            var textarea = document.getElementById("message");
+            var charCountMessage = document.getElementById("charCountMessage");
+
+            textarea.addEventListener("input", function () {
+              var currentCharCount = textarea.value.length;
+              charCountMessage.textContent = currentCharCount + " characters entered (max 2000)";
+            });
+          </script>
+          <button class="btn btn-color-1">Send Message</button>
+        </form>
+      </div>
+    </div>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
